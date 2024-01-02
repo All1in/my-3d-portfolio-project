@@ -3,6 +3,7 @@ import { Suspense } from "react";
 import { Loader } from "../components";
 
 import { Island } from '../../models/Island.jsx'
+import { Sky } from "../../models/Sky.jsx";
 
 const Home = () => {
 
@@ -43,6 +44,9 @@ const Home = () => {
                         groundColor='#000000'
                         intensity={1}
                     />
+
+                    <Sky />
+
                     <Island
                         isRotating={isRotating}
                         setIsRotating={setIsRotating}
