@@ -3,12 +3,13 @@ import { useEffect, useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 import { useFrame, useThree } from "@react-three/fiber";
 
-import islandScene from '../../assets/3d/island.glb'
+import islandScene from '../assets/3d/island.glb'
 
 const Island = (props) => {
-    const { nodes, materials } = useGLTF("/island.glb");
+    const islandRef = useRef();
+    const { nodes, materials } = useGLTF(islandScene);
     return (
-        <a.group {...props} dispose={null}>
+        <a.group ref={islandRef} {...props}>
             <mesh
                 castShadow
                 receiveShadow
