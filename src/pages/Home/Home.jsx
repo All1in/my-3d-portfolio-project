@@ -1,14 +1,35 @@
 import { Canvas } from "@react-three/fiber";
-import { Suspense, useState } from "react";
-import { Loader } from "../components";
+import { Suspense, useEffect, useRef, useState } from "react";
+import Loader from "../../components/Loader/Loader.jsx";
+import HomeInfo from "../../components/HomeInfo/HomeInfo.jsx";
 
 import { Island } from '../../models/Island.jsx'
 import Bird from "../../models/Bird.jsx";
 import { Sky } from "../../models/Sky.jsx";
 import { Plane } from "../../models/Plane.jsx";
 
+import sakura from "../../assets/sakura.mp3"
+import { soundoff, soundon } from "../../assets/icons"
+
+
 const Home = () => {
+    const audioRef = useRef(new Audio(sakura));
+    audioRef.current.volume = 0.4;
+    audioRef.current.loop = true;
+
+    const [currentStage, setCurrentStage] = useState(1);
     const [isRotating, setIsRotating] = useState(false);
+    const [isPlayingMusic, setIsPlayingMusic] = useState(false);
+
+    useEffect(() => {
+        if (isPlayingMusic) {
+            audioRef.current.play();
+        }
+
+        return () => {
+            audioRef.current.pause();
+        };
+    }, [isPlayingMusic]);
 
     const adjustBiplaneForScreenSize = () => {
         let screenScale, screenPosition;
@@ -44,9 +65,10 @@ const Home = () => {
 
     return (
         <section className='w-full h-screen relative'>
-            {/*<div className='absolute top-28 left-0 right-0 z-10 flex items-center justify-center'>*/}
-            {/*    {currentStage && <HomeInfo currentStage={currentStage} />}*/}
-            {/*</div>*/}
+            <div className='absolute top-28 left-0 right-0 z-10 flex items-center justify-center'>
+                {currentStage && <HomeInfo currentStage={currentStage} />}
+            </div>
+
             <Canvas
                 className={`w-full h-screen bg-transparent ${
                     isRotating ? "cursor-grabbing" : "cursor-grab"
@@ -68,8 +90,9 @@ const Home = () => {
                         groundColor='#000000'
                         intensity={1}
                     />
+
                     <Bird />
-                    <Sky />
+                    <Sky isRotating={isRotating} />
                     <Island
                         isRotating={isRotating}
                         setIsRotating={setIsRotating}
@@ -86,6 +109,15 @@ const Home = () => {
                     />
                 </Suspense>
             </Canvas>
+
+            <div className='absolute bottom-2 left-2'>
+                <img
+                    src={!isPlayingMusic ? soundoff : soundon}
+                    alt='jukebox'
+                    onClick={() => setIsPlayingMusic(!isPlayingMusic)}
+                    className='w-10 h-10 cursor-pointer object-contain'
+                />
+            </div>
         </section>
     );
 };

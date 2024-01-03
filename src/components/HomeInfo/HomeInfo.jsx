@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { arrow } from "../../assets/icons/index.js";
+
 
 const HomeInfo = ({ currentStage }) => {
     if (currentStage === 1)
