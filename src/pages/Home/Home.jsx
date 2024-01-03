@@ -2,7 +2,7 @@ import { Canvas } from "@react-three/fiber";
 import { Suspense, useState } from "react";
 import { Loader } from "../components";
 
-import Island from '../../models/Island.jsx'
+import { Island } from '../../models/Island.jsx'
 import Bird from "../../models/Bird.jsx";
 import { Sky } from "../../models/Sky.jsx";
 import { Plane } from "../../models/Plane.jsx";
@@ -44,6 +44,9 @@ const Home = () => {
 
     return (
         <section className='w-full h-screen relative'>
+            {/*<div className='absolute top-28 left-0 right-0 z-10 flex items-center justify-center'>*/}
+            {/*    {currentStage && <HomeInfo currentStage={currentStage} />}*/}
+            {/*</div>*/}
             <Canvas
                 className={`w-full h-screen bg-transparent ${
                     isRotating ? "cursor-grabbing" : "cursor-grab"
