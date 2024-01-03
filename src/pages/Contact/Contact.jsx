@@ -2,7 +2,9 @@ import emailjs from "@emailjs/browser";
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useRef, useState } from "react";
 import { Fox } from "../../models/Fox.jsx";
+import useAlert from "../../hooks/useAlert.js";
 import Loader from "../../components/Loader/Loader.jsx";
+import Alert from "../../components/Alert/Alert.jsx";
 
 
 const Contact = () => {
@@ -72,7 +74,7 @@ const Contact = () => {
 
     return (
         <section className='relative flex lg:flex-row flex-col max-container'>
-            {/*{alert.show && <Alert {...alert} />}*/}
+            {alert.show && <Alert {...alert} />}
 
             <div className='flex-1 min-w-[50%] flex flex-col'>
                 <h1 className='head-text'>Get in Touch</h1>
