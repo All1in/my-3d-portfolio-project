@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar/Navbar.jsx";
 import Home from "./pages/Home/Home.jsx";
 import About from "./pages/About/About.jsx";
 import Contact from "./pages/Contact/Contact.jsx";
+import Projects from "./pages/Project/Project.jsx";
 
 const App = () => (
     <main className='bg-slate-300/20'>
@@ -16,7 +17,7 @@ const App = () => (
                         <>
                             <Routes>
                                 <Route path='/about' element={<About />} />
-                                {/*<Route path='/projects' element={<Projects />} />*/}
+                                <Route path='/projects' element={<Projects />} />
                                 <Route path='/contact' element={<Contact />} />
                             </Routes>
                             {/*<Footer />*/}

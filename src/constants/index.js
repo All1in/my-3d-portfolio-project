@@ -188,7 +188,7 @@ export const projects = [
     {
         iconUrl: estate,
         theme: 'btn-back-black',
-        name: 'Real-Estate Application',
+        name: 'Algorithms implemented in JavaScript',
         description: 'This project contains JavaScript based examples of many popular algorithms and data structures.',
         link: 'https://github.com/All1in/algoritmsssssss.git',
     },

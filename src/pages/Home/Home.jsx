@@ -111,6 +111,7 @@ const Home = () => {
             </Canvas>
 
             <div className='absolute bottom-2 left-2'>
+                <p style={{ marginBottom: '20px' }}> Turn on/off the sound here: </p>
                 <img
                     src={!isPlayingMusic ? soundoff : soundon}
                     alt='jukebox'
