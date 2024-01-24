@@ -167,9 +167,9 @@ export const projects = [
     {
         iconUrl: threads,
         theme: 'btn-back-green',
-        name: 'Finance-App',
-        description: 'Implemented a solution to display price tickers data on the UI in realtime.',
-        link: 'https://github.com/All1in/finance-app.git',
+        name: 'my-video-chat',
+        description: 'This project leverages the power of React and WebRTC to create a real-time communication (RTC) application. WebRTC is a free, open-source project that provides web browsers and mobile applications with real-time communication via simple application programming interfaces (APIs). Paired with the popular React library, this project aims to deliver a seamless and interactive user experience for real-time communication needs.',
+        link: 'https://github.com/All1in/my-video-chat.git',
     },
     {
         iconUrl: car,
