@@ -1,4 +1,4 @@
-import { meta, shopify, starbucks, jaguarteam, tesla, traderoombar } from "../assets/images";
+import { meta, shopify, starbucks, jaguarteam, tesla } from "../assets/images";
 import {
     car,
     contact,
@@ -23,7 +23,9 @@ import {
     summiz,
     tailwindcss,
     threads,
-    typescript
+    typescript,
+    dokUa,
+    ciklum
 } from "../assets/icons";
 
 
@@ -108,29 +110,32 @@ export const skills = [
 
 export const experiences = [
     {
-        title: "Frontend Software Engineer",
-        company_name: "Jaguar team",
-        icon: jaguarteam,
+        title: "React Frontend developer",
+        company_name: "dok.ua",
+        icon: dokUa,
         iconBg: "#accbe1",
-        date: "April 2020 - May 2021",
+        date: "January 2024 - July 2025",
         points: [
-            "Develop frontend part of corporate websites using React.",
-            "Develop cross-browser responsive landing pages.",
-            "Google Maps API integrations.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Reduced page load time by 41.9% by replacing PHP/jQuery with React, enhancing scalability and SEO.",
+            "Lowered API overhead by 37.5% by implementing caching and optimizing Redux-based data fetching.",
+            "Decreased JavaScript execution time by 35.8%, implementing TypeScript and stricter linting.",
+            "Optimized frontend performance by reducing the bundle size from 1.35MB to 412KB, improving load speed by 3.6x with lazy loading",
+            "Built a Puppeteer‑ based performance monitoring framework to automate audits and boost team efficiency.",
+            "Developed testing infrastructure and integrated unit, snapshot, and E2E tests into CI/CD, boosting coverage to 65%.",
         ],
     },
     {
-        title: "Frontend Software Engineer",
-        company_name: "TradeRoomBar",
-        icon: traderoombar,
-        iconBg: "#fbc3bc",
-        date: "MAY 2021– PRESENT",
+        title: "React Frontend developer",
+        company_name: "Ciklum",
+        icon: ciklum,
+        iconBg: "#376dac",
+        date: "July 2022– December 2023",
         points: [
-            "Develop new SPA, features, and components with React, native JS.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Increased cross-browser consistency by 30.1%, refactoring styles with SASS, CSS Modules, and Styled Components.",
+            "Improved mobile responsiveness by 43.5%, optimizing Bootstrap layouts and refining media queries..",
+            "Reduced FCP by 15.3% through React memoization and image optimizations, speeding page loads and boosting UX.",
+            "Built a React/Storybook UI library to speed development and maintain design consistency.",
+            "Enhanced location-based services with Google Maps API: interactive maps, custom markers, and real‑ time geolocation."
         ],
     },
 ];

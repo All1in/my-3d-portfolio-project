@@ -26,6 +26,8 @@ import arrow from './arrow.svg'
 import contact from './contact.svg'
 import soundon from './soundon.png'
 import soundoff from './soundoff.png'
+import dokUa from './dokUa.svg'
+import ciklum from './ciklum_logo.svg'
 
 export {
     css,
@@ -55,5 +57,7 @@ export {
     arrow,
     contact,
     soundon,
-    soundoff
+    soundoff,
+    dokUa,
+    ciklum
 }
