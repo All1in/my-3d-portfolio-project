@@ -28,6 +28,7 @@ import soundon from './soundon.png'
 import soundoff from './soundoff.png'
 import dokUa from './dokUa.svg'
 import ciklum from './ciklum_logo.svg'
+import download from './download.jpeg'
 
 export {
     css,
@@ -59,5 +60,6 @@ export {
     soundon,
     soundoff,
     dokUa,
-    ciklum
+    ciklum,
+    download
 }

@@ -25,7 +25,8 @@ import {
     threads,
     typescript,
     dokUa,
-    ciklum
+    ciklum,
+    download
 } from "../assets/icons";
 
 
@@ -111,19 +112,19 @@ export const skills = [
 export const experiences = [
     {
         title: "React Frontend developer",
-        company_name: "dok.ua",
-        icon: dokUa,
+        company_name: "Sigma Software",
+        icon: download,
         iconBg: "#accbe1",
-        date: "August 2024 - PRESENT",
+        date: "April 2023 - PRESENT",
         points: [
-            "Reduced page load time by 41.9% by replacing PHP/jQuery with React, enhancing scalability and SEO.",
-            "Lowered API overhead by 34% by implementing caching and optimizing Redux-based data fetching.",
-            "Decreased JavaScript execution time by 35.8%, implementing TypeScript and stricter linting.",
-            "Optimized frontend performance by reducing the bundle size from 1.35MB to 412KB, improving load speed by 3.6x with lazy loading",
-            "Built a Puppeteer‑ based performance monitoring framework to automate audits and boost team efficiency.",
-            "Developed testing infrastructure and integrated unit, snapshot, and E2E tests into CI/CD, boosting coverage to 65%.",
-            "Increased cross-browser consistency by 30.1%, refactoring styles with SASS, CSS Modules, and Styled\n" +
-            "Components."
+            "Drove the frontend migration from PHP/jQuery to React and TypeScript. Lighthouse: 54 to 83, LCP: 4.2 to 2.4 s",
+            "Cut the JS bundle from 1.35 MB to 412 KB via code splitting, tree-shaking, and lazy loading — 3.6x faster page loads",
+            "Stood up the entire test infrastructure: Jest (unit), React Testing Library (integration), and Playwright (E2E) wired into CI/CD. Coverage:\n" +
+            "0% to 65%, regression testing: 5 days to 2",
+            "Rolled out i18n for 22 languages via Crowdin and react-i18next — broader reach drove monthly sign-ups from ~800 to ~1,100",
+            "Built a Puppeteer-based Lighthouse runner — perf checks fire automatically on every deploy",
+            "Built a Storybook component library (40+ components, Atomic Design) — cut new screen build time from a full day to 2-3 hours",
+            "Set up CI/CD with Docker and preview deploys — QA started testing features before merge to main"
         ],
     }
 ];
@@ -143,7 +144,7 @@ export const socialLinks = [
     {
         name: 'LinkedIn',
         iconUrl: linkedin,
-        link: 'https://www.linkedin.com/in/bogdan-momot-5307a7242/',
+        link: 'https://www.linkedin.com/in/bohdan-momot-5307a7242/',
     }
 ];
 
